@@ -58,6 +58,9 @@ var Tile = React.createClass({
       finished: false //final state (correct)
     };
   },
+  tileHide: function(){
+    
+  },
   tileClick: function(e) {
     e.preventDefault();
     if( this.state.visible == false){
@@ -77,8 +80,8 @@ var Tile = React.createClass({
             $('.tiles').unbind('click');
           }, 1000);
         }else{
-          arr[finishedIndex].setState({finished: true});
-          arr[finishedIndex + 1].setState({finished: true});
+          arr[finishedIndex].setState({finished: true, opacity: 0.1});
+          arr[finishedIndex + 1].setState({finished: true, opacity: 0.1});
           finishedIndex += 2;
           if(parseInt(this.props.finish) == finishedIndex){
             $('.overlay').show();
@@ -99,13 +102,14 @@ var Tile = React.createClass({
     if (visible) {
       classes = 'open flipInY';
       style = {
-        'backgroundColor': color
+        'backgroundColor': color,
       };
     }else{
       classes = 'tran';
     }
-    if(finished)
+    if(finished){
       containerClass = " good";
+    }  
     else
       containerClass = "";
     return (

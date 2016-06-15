@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  min-height: 100%;
+  background-color: #eee;
+  font-family: sans-serif; }
+
+.app-tiles-game {
+  max-width: 296px;
+  width: 100%;
+  height: auto;
+  margin: 15px auto;
+  cursor: pointer; }
+  .app-tiles-game .tile {
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    float: left;
+    display: block;
+    background-color: #ccc;
+    border-radius: 3px; }
+    .app-tiles-game .tile a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: transparent;
+      font-size: 0px;
+      color: #ccc; }
+    .app-tiles-game .tile .tran {
+      transition: background-color 0.5s;
+      background-color: transparent; }
+    .app-tiles-game .tile .help {
+      font-size: 16px;
+      color: #fff; }
+  .app-tiles-game .good {
+    transition: background-color 0.5s;
+    background-color: transparent; }
+
+.controls input, .controls label {
+  font-size: 18px;
+  line-height: 30px;
+  display: block;
+  float: right;
+  height: 30px; }
+
+.green-btn, .controls a, .overlay .msg a {
+  font-size: 24px;
+  color: #fff;
+  background-color: green;
+  margin: 5px;
+  line-height: 30px;
+  padding: 8px;
+  border-radius: 3px;
+  display: block;
+  float: left;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  display: none; }
+  .overlay .msg {
+    background-color: #fff;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    padding: 15px;
+    margin: 100px auto; }
+    .overlay .msg a {
+      float: none;
+      margin: 2px auto; }
+    .overlay .msg p {
+      font-size: 18px; }
+
+/*# sourceMappingURL=style.css.map */

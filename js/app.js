@@ -63,7 +63,7 @@ var Tile = React.createClass({
   },
   tileClick: function(e) {
     e.preventDefault();
-    if( this.state.visible == false){
+    if( this.state.visible === false){
       this.setState({visible: true});
       var $opened = $('.open');
       arr[$opened.length] = this;
